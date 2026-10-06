@@ -6,8 +6,8 @@ import Jobs from "./Jobs";
 import JobDetails from "./JobDetails";
 import Myapplication from "./Myapplication";
 import AdminJobs from "./AdminJobs";
-import Navbar from "./Navbar";
 import AdminApplications from "./AdminApplications";
+import Navbar from "./Navbar";
 
 function App() {
 
@@ -34,7 +34,6 @@ function App() {
         setSelectedJob(null);
     };
 
-    // Apply for a job
     const handleApplyJob = async (jobId) => {
 
         const storedUser = localStorage.getItem("user");
@@ -73,56 +72,33 @@ function App() {
             }
 
         } catch (error) {
+
             console.error(error);
             alert("Cannot connect to backend");
         }
     };
 
-    // Login / Register
     if (!loggedIn) {
 
-        return (
-            <>
-                {authPage === "login" ? (
-                    <Login
-                        onLoginSuccess={handleLoginSuccess}
-                    />
-                ) : (
-                    <Register
-                        onRegisterSuccess={() => setAuthPage("login")}
-                    />
-                )}
+        if (authPage === "login") {
 
-                <div className="text-center mt-3 mb-4">
+            return (
+                <Login
+                    onLoginSuccess={handleLoginSuccess}
+                    onRegister={() => setAuthPage("register")}
+                />
+            );
 
-                    {authPage === "login" ? (
-                        <p>
-                            Don't have an account?{" "}
-                            <button
-                                className="btn btn-link"
-                                onClick={() => setAuthPage("register")}
-                            >
-                                Register
-                            </button>
-                        </p>
-                    ) : (
-                        <p>
-                            Already have an account?{" "}
-                            <button
-                                className="btn btn-link"
-                                onClick={() => setAuthPage("login")}
-                            >
-                                Login
-                            </button>
-                        </p>
-                    )}
+        } else {
 
-                </div>
-            </>
-        );
+            return (
+                <Register
+                    onRegisterSuccess={() => setAuthPage("login")}
+                />
+            );
+        }
     }
 
-    // Logged-in application
     return (
         <>
             <Navbar
@@ -161,8 +137,8 @@ function App() {
                     )}
 
                     {page === "adminApplications" && (
-    <AdminApplications/>
-)}
+                        <AdminApplications />
+                    )}
                 </>
 
             )}
