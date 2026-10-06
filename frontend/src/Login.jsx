@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-function Login({ onLoginSuccess }) {
+function Login({ onLoginSuccess, onRegister }) {
 
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
@@ -100,7 +100,7 @@ function Login({ onLoginSuccess }) {
 
                                     </div>
 
-                                    <div className="mb-4">
+                                    <div className="mb-3">
 
                                         <label className="form-label">
                                             Password
@@ -129,10 +129,23 @@ function Login({ onLoginSuccess }) {
                                 </form>
 
                                 {message && (
-                                    <div className="alert alert-info text-center mt-4 mb-0">
+                                    <div className="alert alert-info text-center mt-3 mb-0">
                                         {message}
                                     </div>
                                 )}
+
+                                <div className="text-center mt-3">
+                                    <p className="mb-0">
+                                        Don't have an account?{" "}
+                                        <button
+                                            type="button"
+                                            className="btn btn-link p-0"
+                                            onClick={onRegister}
+                                        >
+                                            Register
+                                        </button>
+                                    </p>
+                                </div>
 
                             </div>
 
