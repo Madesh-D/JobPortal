@@ -53,7 +53,7 @@ function App() {
         try {
 
             const response = await fetch(
-                "http://localhost:8080/applications",
+                "https://job-portal-rho-jade.vercel.app/applications",
                 {
                     method: "POST",
                     headers: {

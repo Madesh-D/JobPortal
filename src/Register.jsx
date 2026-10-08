@@ -21,7 +21,7 @@ function Register({ onRegisterSuccess }) {
         try {
 
             const response = await fetch(
-                "http://localhost:8080/users/register",
+                "https://job-portal-rho-jade.vercel.app/users/register",
                 {
                     method: "POST",
                     headers: {

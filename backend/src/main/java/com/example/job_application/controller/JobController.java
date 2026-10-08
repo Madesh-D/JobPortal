@@ -17,7 +17,10 @@ import com.example.job_application.entity.Job;
 import com.example.job_application.service.JobService;
 
 
-@CrossOrigin(origins = "http://localhost:5173")
+@CrossOrigin(origins = {
+    "http://localhost:5173",
+    "https://job-portal-rho-jade.vercel.app"
+})
 @RestController
 @RequestMapping("/jobs")
 
