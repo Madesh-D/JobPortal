@@ -53,7 +53,7 @@ function App() {
         try {
 
             const response = await fetch(
-                "http://localhost:8080/applications",
+                "https://jobportal-production-5280.up.railway.app/applications",
                 {
                     method: "POST",
                     headers: {

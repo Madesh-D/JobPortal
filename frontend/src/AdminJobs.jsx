@@ -20,7 +20,7 @@ function AdminJobs() {
 
     const loadJobs = () => {
 
-        fetch("http://localhost:8080/jobs")
+        fetch("https://jobportal-production-5280.up.railway.app/jobs")
             .then((response) => {
                 if (!response.ok) {
                     throw new Error("Failed to fetch jobs");
@@ -71,7 +71,7 @@ function AdminJobs() {
             if (editingId) {
 
                 response = await fetch(
-                    `http://localhost:8080/jobs/${editingId}`,
+                    `https://jobportal-production-5280.up.railway.app/jobs/${editingId}`,
                     {
                         method: "PUT",
                         headers: {
@@ -84,7 +84,7 @@ function AdminJobs() {
             } else {
 
                 response = await fetch(
-                    "http://localhost:8080/jobs",
+                    "https://jobportal-production-5280.up.railway.app/jobs",
                     {
                         method: "POST",
                         headers: {
@@ -155,7 +155,7 @@ function AdminJobs() {
         try {
 
             const response = await fetch(
-                `http://localhost:8080/jobs/${id}`,
+                `https://jobportal-production-5280.up.railway.app/jobs/${id}`,
                 {
                     method: "DELETE"
                 }

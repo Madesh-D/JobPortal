@@ -8,7 +8,7 @@ function AdminApplications() {
 
     const loadApplications = () => {
 
-        fetch("http://localhost:8080/applications")
+        fetch("https://jobportal-production-5280.up.railway.app/applications")
             .then((response) => {
 
                 if (!response.ok) {
@@ -37,7 +37,7 @@ function AdminApplications() {
         try {
 
             const response = await fetch(
-                `http://localhost:8080/applications/${id}/status`,
+                `https://jobportal-production-5280.up.railway.app/applications/${id}/status`,
                 {
                     method: "PUT",
                     headers: {

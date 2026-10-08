@@ -17,7 +17,7 @@ function Login({ onLoginSuccess, onRegister }) {
         try {
 
             const response = await fetch(
-                "http://localhost:8080/users/login",
+                "https://jobportal-production-5280.up.railway.app/users/login",
                 {
                     method: "POST",
                     headers: {

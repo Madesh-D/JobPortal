@@ -18,7 +18,7 @@ function Myapplication() {
 
         const user = JSON.parse(storedUser);
 
-        fetch(`http://localhost:8080/applications/user/${user.id}`)
+        fetch(`https://jobportal-production-5280.up.railway.app/applications/user/${user.id}`)
             .then((response) => {
 
                 if (!response.ok) {

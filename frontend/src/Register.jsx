@@ -21,7 +21,7 @@ function Register({ onRegisterSuccess }) {
         try {
 
             const response = await fetch(
-                "http://localhost:8080/users/register",
+                "https://jobportal-production-5280.up.railway.app/users/register",
                 {
                     method: "POST",
                     headers: {

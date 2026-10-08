@@ -13,7 +13,7 @@ function Jobs({ onViewDetails }) {
 
     useEffect(() => {
 
-        fetch("http://localhost:8080/jobs")
+        fetch("https://jobportal-production-5280.up.railway.app/jobs")
             .then((response) => {
 
                 if (!response.ok) {
@@ -82,7 +82,7 @@ function Jobs({ onViewDetails }) {
         try {
 
             const response = await fetch(
-                "http://localhost:8080/applications",
+                "https://jobportal-production-5280.up.railway.app/applications",
                 {
                     method: "POST",
                     headers: {
