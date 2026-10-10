@@ -17,7 +17,7 @@ function App() {
 
     const [page, setPage] = useState("jobs");
 
-    const [authPage, setAuthPage] = useState("login");
+    const [authPage, setAuthPage] = useState("register");
 
     const [selectedJob, setSelectedJob] = useState(null);
 
