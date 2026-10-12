@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-function Register({ onRegisterSuccess }) {
+function Register({ onRegisterSuccess, onLogin }) {
 
     const [name, setName] = useState("");
     const [email, setEmail] = useState("");
@@ -172,6 +172,19 @@ function Register({ onRegisterSuccess }) {
                                         {message}
                                     </div>
                                 )}
+<div className="text-center mt-3">
+    <p className="mb-0">
+        Already have an account?{" "}
+        <button
+            type="button"
+            className="btn btn-link p-0"
+            onClick={onLogin}
+        >
+            Login
+        </button>
+    </p>
+</div>
+                                
 
                             </div>
 
