@@ -94,6 +94,7 @@ function App() {
             return (
                 <Register
                     onRegisterSuccess={() => setAuthPage("login")}
+                    onLogin={() => setAuthPage("login")}
                 />
             );
         }
